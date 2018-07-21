@@ -79,7 +79,8 @@
 
             .text{
                 padding: 0 12px;
-                font-size: 14px;
+                font-size: 14px; 
+                
             }
         }
         .list{
