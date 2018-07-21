@@ -83,7 +83,7 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
-        <div class="show-detail">
+        <div class="show-detail" @click="viewDetail">
             展品介绍<img src="../../assets/images/arrow.png" width="11" height="auto" alt="">
         </div>
     </div>
@@ -99,6 +99,11 @@
                 nextButton: '.swiper-button-next',
                 prevButton: '.swiper-button-prev',
             })
+        },
+        methods: {
+            viewDetail() {
+                this.$router.push('./detail')
+            }
         }
     }
 </script>
@@ -128,24 +133,6 @@
                 width: 14px;
                 height: 22px;
                 background-size: 14px 22px;
-            }
-        }
-
-        .show-detail{
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 25px;
-            text-align: center;
-            line-height: 25px;
-            font-size: 13px;
-            border: 1px solid #fff;
-            color: #fff;
-
-            img{
-                margin-left: 10px;
             }
         }
     }
